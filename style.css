@@ -456,7 +456,7 @@ body {
 .quote-container {
   margin-bottom: 3rem;
   opacity: 0;
-  animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1s ease 0.3s forwards;
 }
 
 .quote {
@@ -476,9 +476,9 @@ body {
 
 /* Countdown container */
 .countdown-container {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   opacity: 0;
-  animation: fadeInUp 1s ease 0.3s forwards;
+  animation: fadeInUp 1s ease 0.1s forwards;
 }
 
 .countdown-title {
