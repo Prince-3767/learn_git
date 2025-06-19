@@ -1,18 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>one</title>
-    <style>
-        h2{
-            color: blue;
-        }
-    </style>
-</head>
-<body>
-    <h2>Welcome to my website. ??</h2>
-    <h3> Added new heading. </h3>
-    <p>Hello World!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Journey - Make Every Moment Count</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Background gradient overlay -->
+      <div class="background-overlay"></div>
+
+      <!-- Geometric floating shapes -->
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+      </div>
+
+      <!-- Main content -->
+      <main class="main-content">
+        <!-- Header section -->
+        <header class="header">
+          <div class="logo">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12,6 12,12 16,14"></polyline>
+            </svg>
+            <h1>Life Journey</h1>
+          </div>
+          <button class="settings-btn" id="settingsBtn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M12 1v6m0 6v6m11-7h-6m-6 0H1m17-4a4 4 0 01-8 0m8 0a4 4 0 10-8 0"
+              ></path>
+            </svg>
+          </button>
+        </header>
+
+        <!-- Welcome section for new users -->
+        <section class="welcome-section" id="welcomeSection">
+          <div class="welcome-content">
+            <h2>Welcome to Your Life Journey</h2>
+            <p>
+              Transform your new tab into a powerful reminder to make every
+              moment count.
+            </p>
+            <p>Enter your birth date to begin your motivational countdown:</p>
+
+            <form class="birth-form" id="birthForm">
+              <div class="form-group">
+                <label for="birthDate">Your Birth Date:</label>
+                <input type="date" id="birthDate" required />
+              </div>
+              <button type="submit" class="start-btn">Start My Journey</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Countdown section -->
+        <section
+          class="countdown-section"
+          id="countdownSection"
+          style="display: none"
+        >
+          <!-- Motivational quote -->
+          <div class="quote-container">
+            <blockquote class="quote" id="motivationalQuote">
+              "The way to get started is to quit talking and begin doing."
+            </blockquote>
+            <cite class="quote-author" id="quoteAuthor">- Walt Disney</cite>
+          </div>
+
+          <!-- Main countdown display -->
+          <div class="countdown-container">
+            <h2 class="countdown-title">Time to Make Impact</h2>
+            <div class="countdown-grid">
+              <div class="countdown-item">
+                <span class="countdown-number" id="years">0</span>
+                <span class="countdown-label">Years</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="months">0</span>
+                <span class="countdown-label">Months</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="days">0</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="hours">0</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="minutes">0</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="seconds">0</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motivational message -->
+          <div class="motivation-message">
+            <p id="motivationText">
+              Every second is a chance to change your life. What will you create
+              today?
+            </p>
+          </div>
+
+          <!-- Progress visualization -->
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-labels">
+              <span>Life Lived</span>
+              <span id="progressPercentage">0%</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings modal -->
+        <div class="modal" id="settingsModal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Settings</h3>
+              <button class="close-btn" id="closeModal">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="settingsForm">
+                <div class="form-group">
+                  <label for="settingsBirthDate">Birth Date:</label>
+                  <input type="date" id="settingsBirthDate" />
+                </div>
+                <div class="form-group">
+                  <label for="lifeExpectancy">Life Expectancy (years):</label>
+                  <input
+                    type="number"
+                    id="lifeExpectancy"
+                    min="60"
+                    max="120"
+                    value="78"
+                  />
+                </div>
+                <div class="form-actions">
+                  <button type="button" id="resetData" class="reset-btn">
+                    Reset All Data
+                  </button>
+                  <button type="submit" class="save-btn">Save Changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+          Make every moment count •
+          <a href="setup-instructions.html" target="_blank"
+            >Setup Instructions</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

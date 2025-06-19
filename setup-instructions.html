@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setup Instructions - Life Journey</title>
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 3rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+      }
+
+      p,
+      li {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      ol,
+      ul {
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+      }
+
+      code {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.2rem 0.5rem;
+        border-radius: 6px;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+        font-size: 0.95rem;
+      }
+
+      .warning {
+        background: rgba(255, 193, 7, 0.2);
+        border: 1px solid rgba(255, 193, 7, 0.4);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .info {
+        background: rgba(23, 162, 184, 0.2);
+        border: 1px solid rgba(23, 162, 184, 0.4);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #fff;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .back-link:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 2rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        p,
+        li {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Setup Instructions</h1>
+      <p>Follow these steps to set Life Journey as your Chrome new tab page:</p>
+
+      <h2>Method 1: Using a Chrome Extension (Recommended)</h2>
+
+      <h3>Step 1: Install a New Tab Extension</h3>
+      <ol>
+        <li>Open Google Chrome</li>
+        <li>Go to the Chrome Web Store</li>
+        <li>Search for "New Tab Redirect" or "Custom New Tab URL"</li>
+        <li>
+          Install one of these extensions (recommended: "New Tab Redirect")
+        </li>
+      </ol>
+
+      <h3>Step 2: Host Your Life Journey Page</h3>
+      <ol>
+        <li>
+          Save all the Life Journey files (<code>index.html</code>,
+          <code>styles.css</code>, <code>script.js</code>) in a folder
+        </li>
+        <li>
+          Use one of these hosting options:
+          <ul>
+            <li>
+              <strong>GitHub Pages (Free):</strong> Upload files to a GitHub
+              repository and enable Pages
+            </li>
+            <li>
+              <strong>Netlify (Free):</strong> Drag and drop your folder to
+              netlify.com
+            </li>
+            <li>
+              <strong>Local file:</strong> Use
+              <code>file:///path/to/your/index.html</code> (may have
+              limitations)
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Step 3: Configure the Extension</h3>
+      <ol>
+        <li>Click on the extension icon in Chrome</li>
+        <li>
+          Enter your hosted URL (e.g.,
+          <code>https://yourusername.github.io/life-journey</code>)
+        </li>
+        <li>Save the settings</li>
+        <li>Open a new tab to test</li>
+      </ol>
+
+      <div class="info">
+        <strong>Pro Tip:</strong> GitHub Pages is free and reliable. Create a
+        repository named "life-journey", upload your files, and your page will
+        be available at <code>https://yourusername.github.io/life-journey</code>
+      </div>
+
+      <h2>Method 2: Using Local Files (Advanced)</h2>
+
+      <h3>For Local Development:</h3>
+      <ol>
+        <li>Save all files in a local folder</li>
+        <li>Open Chrome and type <code>chrome://extensions/</code></li>
+        <li>Enable "Developer mode" (top-right toggle)</li>
+        <li>
+          Use a new tab extension and point it to your local
+          <code>file://</code> path
+        </li>
+      </ol>
+
+      <div class="warning">
+        <strong>Note:</strong> Local files may have limited functionality due to
+        browser security restrictions. Online hosting is recommended for the
+        best experience.
+      </div>
+
+      <h2>Alternative Extensions to Try:</h2>
+      <ul>
+        <li><strong>New Tab Redirect</strong> - Simple and reliable</li>
+        <li><strong>Custom New Tab URL</strong> - Lightweight option</li>
+        <li><strong>Momentum</strong> - Can be configured with custom URLs</li>
+        <li><strong>Tabliss</strong> - Highly customizable</li>
+      </ul>
+
+      <h2>Troubleshooting</h2>
+
+      <h3>Page Not Loading?</h3>
+      <ul>
+        <li>Check if your URL is correct and accessible</li>
+        <li>Ensure HTTPS is used (not HTTP) for hosted pages</li>
+        <li>Try opening the URL directly in a browser first</li>
+      </ul>
+
+      <h3>Data Not Saving?</h3>
+      <ul>
+        <li>Make sure you're using HTTPS (localStorage restrictions)</li>
+        <li>Check if browser has localStorage enabled</li>
+        <li>Try refreshing the page and re-entering your birth date</li>
+      </ul>
+
+      <h3>Extension Not Working?</h3>
+      <ul>
+        <li>Disable and re-enable the extension</li>
+        <li>Try a different new tab extension</li>
+        <li>Check Chrome extension permissions</li>
+      </ul>
+
+      <div class="info">
+        <strong>Quick Test:</strong> You can test the page immediately by
+        opening <code>index.html</code> directly in Chrome before setting it as
+        your new tab page.
+      </div>
+
+      <h2>Recommended Hosting: GitHub Pages Setup</h2>
+      <ol>
+        <li>Create a GitHub account if you don't have one</li>
+        <li>Create a new repository called "life-journey"</li>
+        <li>
+          Upload <code>index.html</code>, <code>styles.css</code>, and
+          <code>script.js</code>
+        </li>
+        <li>Go to repository Settings → Pages</li>
+        <li>Select "Deploy from a branch" and choose "main"</li>
+        <li>
+          Your page will be available at
+          <code>https://yourusername.github.io/life-journey</code>
+        </li>
+        <li>Use this URL in your new tab extension</li>
+      </ol>
+
+      <a href="index.html" class="back-link">← Back to Life Journey</a>
+    </div>
+  </body>
+</html>
